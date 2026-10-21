@@ -20,16 +20,18 @@ in the corresponding numerical datasets.
 
 ## Numerical datasets
 
-The two-dimensional results are archived separately with the thesis appendix
-plots, saved fields, profiles, meshes, run settings and scalar budgets.
+The numerical results are archived in three separate datasets with thesis
+figures, saved fields, profiles, meshes, run settings and scalar budgets.
 
 | Dataset | Thesis material | DOI |
 | --- | --- | --- |
 | Cartesian plume simulations | Appendices B and D | [10.5281/zenodo.23540946](https://doi.org/10.5281/zenodo.23540946) |
 | Axisymmetric plume simulations | Appendices C and D | [10.5281/zenodo.23541035](https://doi.org/10.5281/zenodo.23541035) |
+| Three-dimensional rectangular plume simulations | Chapter 6 and Appendix E | [10.5281/zenodo.23542837](https://doi.org/10.5281/zenodo.23542837) |
 
-Each record includes a data guide and resolution comparisons. The three-dimensional
-dataset is planned as a separate record.
+Each record includes a data guide and resolution comparisons. The 3D dataset
+contains the long reference calculation, controlled reference and refined runs,
+time-step comparisons, and the reduced-height fields used in Appendix E.
 
 ## Requirements and use
 
@@ -74,15 +76,7 @@ Zenodo. [doi:10.5281/zenodo.23540374](https://doi.org/10.5281/zenodo.23540374).
 [CITATION.cff](CITATION.cff) identifies the September source snapshot,
 commit `709c85596109fa5700c16ddb7e8c454d5f2d5900`.
 
-## Related experimental methods and acknowledgements
-
-The companion [PLIF experimental analysis](https://github.com/arijasad/PhD-Stratified-Plume-Experimental-Analysis)
-adapts the reconstruction method in Horne-Jones et al. (2026), Section 3.2,
-equations (16)–(18):
-
-Horne-Jones, J. T., Glinnan, D. J., Lawrie, A. G. W. and Williams, R. J. R. (2026).
-*Controlled accelerations for Rayleigh–Taylor instability*. **Experiments in Fluids**,
-67, 96. [doi:10.1007/s00348-026-04249-4](https://doi.org/10.1007/s00348-026-04249-4).
+## Acknowledgements
 
 Arij Asad developed this numerical software. Andrew G. W. Lawrie and
 Stuart J. Thomson supervised the research; Yaojue Xiong helped with the initial
