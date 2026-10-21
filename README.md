@@ -1,48 +1,82 @@
 # FEniCS stratification modelling
 
-Source, launchers, verification utilities and post-processing for the numerical
-models in this repository.
+Source code for buoyant plume and stratification simulations developed for Arij Asad's
+PhD research, *Mixing behaviour of plumes*, at the University of Bristol.
 
-## Layout
+## Contents
 
-- `models/cartesian/`: Cartesian solvers and verification cases
-- `models/axisymmetric/`: current, verification and earlier axisymmetric sources
-- `models/rectangular_3d_earlier/`: reduced-height rectangular 3D sources
-- `models/rectangular_3d_quantitative/`: current full-height rectangular 3D source
-- `postprocessing/`: MATLAB and Python analysis utilities
-- `archive/`: superseded sources retained for provenance and old checkpoints
-- `tests/`: local repository and launcher checks
+| Folder | Purpose |
+| --- | --- |
+| `models/cartesian/` | Cartesian solvers and verification cases; Appendices B and D |
+| `models/axisymmetric/` | Axisymmetric solvers and verification cases; Appendices C and D |
+| `models/rectangular_3d_earlier/` | Reduced-height and trial 3D models; Appendix E |
+| `models/rectangular_3d_quantitative/` | Full-height rectangular 3D model; Chapter 6 and Appendix E |
+| `postprocessing/` | Python and MATLAB analysis |
+| `archive/` | Earlier sources retained for provenance and checkpoint compatibility |
+| `tests/` | Repository, numerical-kernel and mocked launcher checks |
 
-## Requirements
+This repository contains software. Saved simulation fields and checkpoints belong
+in the corresponding numerical datasets.
 
-The simulations use legacy FEniCS 2019.1.0 with PETSc and MPI. Later 2D checks
-also use NumPy and SciPy. Python post-processing uses NumPy, SciPy, h5py and
-Matplotlib; axisymmetric overlap calculations require Shapely 2 or later.
+## Requirements and use
 
-Use the instructions in the relevant model folder. Set the Slurm account, module
-and work paths for the target cluster before submission. The 2D verification cases
-use one MPI rank; the 3D launchers request 24.
+Simulations use **legacy FEniCS 2019.1.0**, PETSc/petsc4py and MPI/mpi4py.
+Python analysis uses NumPy, SciPy, h5py and Matplotlib; axisymmetric overlap
+calculations also use Shapely 2 or later. MATLAB scripts require MATLAB.
 
-## Checks
+Follow the README in the relevant model folder. Cluster launchers use Linux,
+Bash, GNU command-line tools and Slurm. Set your account, partition, modules and
+working paths before submission. The 2D verification launchers use one MPI rank;
+the 3D launchers request 24. The axisymmetric extra-fine quarter-step launcher
+currently stops for review at 5 s, despite its historical `50s` filename.
 
-Run from the repository root with Python 3.9 or later:
+## Checks and numerical scope
+
+Run the repository checks from the root:
 
 ```sh
 python tests/check_repository.py
 ```
 
-This checks syntax, file dependencies, numerical kernels and mocked launcher
-control paths. It does not run coupled FEniCS simulations or MATLAB.
+The `layout` and `kernels` groups can also be run separately with `--group`.
+The October 2026 audit passed syntax checks for 66 Python and 23 shell files,
+all 13 numerical self-test programs, and the axisymmetric underflow regression.
+The full launcher checks require Linux/GNU tools; the macOS run stopped during
+mocked Cartesian packaging. See [reproducibility notes](docs/reproducibility.md)
+for the environment and scope of these checks.
 
-## Outputs and restarts
-
-Simulation outputs, checkpoints and generated figures are not included. The
-post-processing scripts require the corresponding return folders or XDMF/HDF5
-pairs.
-
-Only saved output times should be treated as completed. Checkpoints are
-version-specific and require their matching source and helper files.
+Mesh sensitivity remains unresolved in the thesis comparisons, and mesh
+independence has not been established. The 2D geometries are approximations to
+the experimental enclosure. Keep saved results with their mesh, configuration,
+source hashes and accepted output times; retain XDMF/HDF5 files together.
 
 ## Citation
 
-Citation details are in `CITATION.cff`. Include the commit used.
+Asad, A. (2026). *FEniCS stratification modelling: Thesis code*
+(version `thesis-code-2026-09-27`).
+Zenodo. [doi:10.5281/zenodo.23540374](https://doi.org/10.5281/zenodo.23540374).
+
+[Original GitHub release](https://github.com/arijasad/PhD-FEniCS-Stratification-Modelling/releases/tag/thesis-code-2026-09-27).
+
+[CITATION.cff](CITATION.cff) identifies the September source snapshot,
+commit `709c85596109fa5700c16ddb7e8c454d5f2d5900`.
+
+## Related experimental methods and acknowledgements
+
+The companion [PLIF experimental analysis](https://github.com/arijasad/PhD-Stratified-Plume-Experimental-Analysis)
+adapts the reconstruction method in Horne-Jones et al. (2026), Section 3.2,
+equations (16)–(18):
+
+Horne-Jones, J. T., Glinnan, D. J., Lawrie, A. G. W. and Williams, R. J. R. (2026).
+*Controlled accelerations for Rayleigh–Taylor instability*. **Experiments in Fluids**,
+67, 96. [doi:10.1007/s00348-026-04249-4](https://doi.org/10.1007/s00348-026-04249-4).
+
+Arij Asad developed this numerical software. Andrew G. W. Lawrie and
+Stuart J. Thomson supervised the research; Yaojue Xiong helped with the initial
+use of FEniCS. The research was supported by a Radioactive Waste Management
+studentship, now within Nuclear Waste Services.
+
+## Licence
+
+[MIT](LICENSE), copyright 2026 Arij Asad. This licence also applies to the
+`thesis-code-2026-09-27` source snapshot. External libraries retain their own licences.
