@@ -18,6 +18,19 @@ PhD research, *Mixing behaviour of plumes*, at the University of Bristol.
 This repository contains software. Saved simulation fields and checkpoints belong
 in the corresponding numerical datasets.
 
+## Numerical datasets
+
+The two-dimensional results are archived separately with the thesis appendix
+plots, saved fields, profiles, meshes, run settings and scalar budgets.
+
+| Dataset | Thesis material | DOI |
+| --- | --- | --- |
+| Cartesian plume simulations | Appendices B and D | [10.5281/zenodo.23540946](https://doi.org/10.5281/zenodo.23540946) |
+| Axisymmetric plume simulations | Appendices C and D | [10.5281/zenodo.23541035](https://doi.org/10.5281/zenodo.23541035) |
+
+Each record includes a data guide and resolution comparisons. The three-dimensional
+dataset is planned as a separate record.
+
 ## Requirements and use
 
 Simulations use **legacy FEniCS 2019.1.0**, PETSc/petsc4py and MPI/mpi4py.
