@@ -27,7 +27,7 @@ figures, saved fields, profiles, meshes, run settings and scalar budgets.
 | --- | --- | --- |
 | Cartesian plume simulations | Appendices B and D | [10.5281/zenodo.23540946](https://doi.org/10.5281/zenodo.23540946) |
 | Axisymmetric plume simulations | Appendices C and D | [10.5281/zenodo.23541035](https://doi.org/10.5281/zenodo.23541035) |
-| Three-dimensional rectangular plume simulations | Chapter 6 and Appendix E | [10.5281/zenodo.23542837](https://doi.org/10.5281/zenodo.23542837) |
+| Three-dimensional rectangular plume simulations | Chapter 6 and Appendix E | [10.5281/zenodo.23702682](https://doi.org/10.5281/zenodo.23702682) |
 
 Each record includes a data guide and resolution comparisons. The 3D dataset
 contains the long reference calculation, controlled reference and refined runs,
