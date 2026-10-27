@@ -1,17 +1,16 @@
 cff-version: 1.2.0
 type: software
-message: Please cite the thesis-code-2026-09-27 software release.
+message: Please cite the archived software version you used.
 title: 'FEniCS stratification modelling: Thesis code'
 authors:
 - family-names: Asad
   given-names: Arij
   affiliation: University of Bristol
   orcid: https://orcid.org/0009-0008-2063-4154
-version: thesis-code-2026-09-27
-date-released: '2026-09-27'
-commit: 709c85596109fa5700c16ddb7e8c454d5f2d5900
+version: thesis-code-2026-10-27
+date-released: '2026-10-27'
 repository-code: https://github.com/arijasad/PhD-FEniCS-Stratification-Modelling
-url: https://doi.org/10.5281/zenodo.23540374
+url: https://doi.org/10.5281/zenodo.23702110
 abstract: Source code for buoyant plume and stratification simulations developed for Arij Asad's PhD
   research, Mixing behaviour of plumes, at the University of Bristol. The package covers two-dimensional
   Cartesian, two-dimensional axisymmetric and three-dimensional rectangular configurations. It contains
@@ -25,4 +24,4 @@ keywords:
 - conservative transport
 - research software
 license: MIT
-doi: 10.5281/zenodo.23540374
+doi: 10.5281/zenodo.23702110
