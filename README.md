@@ -68,13 +68,12 @@ source hashes and accepted output times; retain XDMF/HDF5 files together.
 ## Citation
 
 Asad, A. (2026). *FEniCS stratification modelling: Thesis code*
-(version `thesis-code-2026-09-27`).
-Zenodo. [doi:10.5281/zenodo.23540374](https://doi.org/10.5281/zenodo.23540374).
+(version `thesis-code-2026-10-27`). Zenodo.
+[doi:10.5281/zenodo.23702110](https://doi.org/10.5281/zenodo.23702110).
 
-[Original GitHub release](https://github.com/arijasad/PhD-FEniCS-Stratification-Modelling/releases/tag/thesis-code-2026-09-27).
+[GitHub release](https://github.com/arijasad/PhD-FEniCS-Stratification-Modelling/releases/tag/thesis-code-2026-10-27).
 
-[CITATION.cff](CITATION.cff) identifies the September source snapshot,
-commit `709c85596109fa5700c16ddb7e8c454d5f2d5900`.
+[CITATION.cff](CITATION.cff) identifies this archived version.
 
 ## Acknowledgements
 
